@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.pixi/
+.ruff_cache/
+/runs/
+/reports/
