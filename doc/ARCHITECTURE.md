@@ -17,14 +17,16 @@ flowchart LR
     W["waveform_link.py<br>waveformDesign 波形与链路入口"]
     O["OpenNTN 2.1 · Sionna<br>使用星历提供的带符号多普勒"]
     L["本地 OpenNTN 0.1 · Sionna<br>使用后端自己的卫星几何设定"]
+    V["waveform_link.py<br>核验返回的 JSON"]
     R["runs / result.json<br>验证结果和来源"]
     A -->|默认模式| N
     N -->|公共多普勒 Hz| W
     A -->|历史模式| W
     W -->|默认后端| O
     W -->|legacy 后端| L
-    O --> R
-    L --> R
+    O --> V
+    L --> V
+    V --> R
     A --> R
 ```
 
